@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="elementor-size-sm" href="#">
+      <span class="text">Kom igang</span>
+    </div>
+    <div class="AtletPosing">
+      <header class="container">
+        <div class="AtletPosing-logo">
+          <img src="Logo.png" alt="AtletPosing" />
+        </div>
+        <div class="hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="hamburger-icon"
+            fill="#ffff"
+            width="35px"
+          >
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+        </div>
+        <nav class="navlist">
+          <li>OM</li>
+          <li>NYHEDSBREV</li>
+        </nav>
+      </header>
+      <section>
+        <div class="AtletPosing-section container">
+          <div class="left-atlet">
+            <img
+              src="https://jensthebeast.dk/wp-content/uploads/2023/07/jens12-1.png"
+              alt=""
+            />
+          </div>
+          <div class="right-atlet">
+            <div class="atletposting-heading">
+              <h1>AtletPosing</h1>
+              <p>online coaching</p>
+            </div>
+            <div class="atlet-posting-contact-form">
+              <div class="form-container lenus-form">
+                <div class="progress-bar"></div>
+                <form id="contactForm">
+                  <div id="step1" class="form-step active">
+                    <h2>Which category will you compete in?</h2>
+                    <button
+                      type="button"
+                      class="category-btn form-btn"
+                      data-category="Men's Physique"
+                    >
+                      Men's Physique
+                    </button>
+                    <button
+                      type="button"
+                      class="category-btn form-btn"
+                      data-category="Classic Physique"
+                    >
+                      Classic Physique
+                    </button>
+                    <button
+                      type="button"
+                      class="category-btn form-btn"
+                      data-category="Bodybuilding"
+                    >
+                      Bodybuilding
+                    </button>
+                  </div>
+
+                  <div id="step2" class="form-step">
+                    <h2>What is your posing skill level?</h2>
+                    <button
+                      type="button"
+                      class="level-btn form-btn"
+                      data-level="Beginner"
+                    >
+                      Beginner
+                    </button>
+                    <button
+                      type="button"
+                      class="level-btn form-btn"
+                      data-level="Intermediate"
+                    >
+                      Intermediate
+                    </button>
+                    <button
+                      type="button"
+                      class="level-btn form-btn"
+                      data-level="Advanced"
+                    >
+                      Advanced
+                    </button>
+                  </div>
+
+                  <div id="step3" class="form-step">
+                    <h2>How much time until your show?</h2>
+                    <button
+                      type="button"
+                      class="time-btn form-btn"
+                      data-time="1-10 weeks"
+                    >
+                      1-10 weeks
+                    </button>
+                    <button
+                      type="button"
+                      class="time-btn form-btn"
+                      data-time="10-20 weeks"
+                    >
+                      10-20 weeks
+                    </button>
+                    <button
+                      type="button"
+                      class="time-btn form-btn"
+                      data-time="Over 20 weeks"
+                    >
+                      Over 20 weeks
+                    </button>
+                  </div>
+                  <div id="step4" class="form-step">
+                    <h2>
+                      4) What are your goals and focus areas for this process?
+                    </h2>
+                    <textarea
+                      id="goals"
+                      name="goals"
+                      rows="4"
+                      placeholder="Enter your goals and focus areas"
+                    ></textarea>
+                    <button
+                      type="button"
+                      class="form-btn"
+                      id="showContactFormBtn"
+                    >
+                      Contact Information
+                    </button>
+                  </div>
+
+                  <div id="step5" class="form-step">
+                    <h2>Contact Information</h2>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      placeholder="First Name"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      placeholder="Last Name"
+                      required
+                    />
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Email"
+                      required
+                    />
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Phone Number"
+                      required
+                    />
+                    <button type="submit" class="form-btn" id="submitBtn">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="transformation-clients">
+          <div class="previous-history-testimonials flex container">
+            <div class="previous-history flex">
+              <div class="previous-title">
+                <h2>bliv den bedste</h2>
+                <h1>version</h1>
+                <h2>af dig selv</h2>
+              </div>
+              <div class="more-images swiper-button-next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#fff"
+                >
+                  <path
+                    d="M11.8284 12.0005L14.6569 14.8289L13.2426 16.2431L9 12.0005L13.2426 7.75781L14.6569 9.17203L11.8284 12.0005Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide testimonial-after-before flex">
+                  <div class="testimonials-clients flex">
+                    <div class="testimonials-logo">
+                      <img src="Logo.png" alt="" />
+                    </div>
+                    <div class="testimonials-title">
+                      <p>Lorem, ipsum.</p>
+                      <h4>yasir malik</h4>
+                    </div>
+                  </div>
+                  <div class="testimonials flex">
+                    <div class="before-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="after-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="previous-clients">
+                    <div class="prev-client">
+                      <img src="AlexanderFor.jpeg"" />
+                    </div>
+                    <div class="prev-client">
+                      <img src="AlexanderEfter.jpeg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonial-after-before flex">
+                  <div class="testimonials-clients flex">
+                    <div class="testimonials-logo">
+                      <img src="Logo.png" alt="" />
+                    </div>
+                    <div class="testimonials-title">
+                      <p>Lorem, ipsum.</p>
+                      <h4>yasir malik</h4>
+                    </div>
+                  </div>
+                  <div class="testimonials flex">
+                    <div class="before-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="after-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="previous-clients">
+                    <div class="prev-client">
+                      <img src="AlexanderFor.jpeg"" />
+                    </div>
+                    <div class="prev-client">
+                      <img src="AlexanderEfter.jpeg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonial-after-before flex">
+                  <div class="testimonials-clients flex">
+                    <div class="testimonials-logo">
+                      <img src="Logo.png" alt="" />
+                    </div>
+                    <div class="testimonials-title">
+                      <p>Lorem, ipsum.</p>
+                      <h4>yasir malik</h4>
+                    </div>
+                  </div>
+                  <div class="testimonials flex">
+                    <div class="before-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="after-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="previous-clients">
+                    <div class="prev-client">
+                      <img src="AlexanderFor.jpeg"" />
+                    </div>
+                    <div class="prev-client">
+                      <img src="AlexanderEfter.jpeg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonial-after-before flex">
+                  <div class="testimonials-clients flex">
+                    <div class="testimonials-logo">
+                      <img src="Logo.png" alt="" />
+                    </div>
+                    <div class="testimonials-title">
+                      <p>Lorem, ipsum.</p>
+                      <h4>yasir malik</h4>
+                    </div>
+                  </div>
+                  <div class="testimonials flex">
+                    <div class="before-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="after-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="previous-clients">
+                    <div class="prev-client">
+                      <img src="AlexanderFor.jpeg"" />
+                    </div>
+                    <div class="prev-client">
+                      <img src="AlexanderEfter.jpeg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonial-after-before flex">
+                  <div class="testimonials-clients flex">
+                    <div class="testimonials-logo">
+                      <img src="Logo.png" alt="" />
+                    </div>
+                    <div class="testimonials-title">
+                      <p>Lorem, ipsum.</p>
+                      <h4>yasir malik</h4>
+                    </div>
+                  </div>
+                  <div class="testimonials flex">
+                    <div class="before-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="after-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="previous-clients">
+                    <div class="prev-client">
+                      <img src="AlexanderFor.jpeg"" />
+                    </div>
+                    <div class="prev-client">
+                      <img src="AlexanderEfter.jpeg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonial-after-before flex">
+                  <div class="testimonials-clients flex">
+                    <div class="testimonials-logo">
+                      <img src="Logo.png" alt="" />
+                    </div>
+                    <div class="testimonials-title">
+                      <p>Lorem, ipsum.</p>
+                      <h4>yasir malik</h4>
+                    </div>
+                  </div>
+                  <div class="testimonials flex">
+                    <div class="before-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="after-title">
+                      <div class="testimonials-content flex">
+                        <div class="testimonials-logo">
+                          <img src="Logo.png" alt="" />
+                        </div>
+                        <div class="testimonials-title">
+                          <p>Lorem, ipsum.</p>
+                          <h4>yasir malik</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="previous-clients">
+                    <div class="prev-client">
+                      <img src="AlexanderFor.jpeg"" />
+                    </div>
+                    <div class="prev-client">
+                      <img src="AlexanderEfter.jpeg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-goals-method">
+        <h2>Our Main Goals and Method/Strategy</h2>
+        <div class="content">
+          <p>
+            AtletPosing is Denmark's leading posing brand. We assist male
+            athletes in Men's Physique, Classic Physique, and Bodybuilding. Our
+            main goal is to elevate the average posing level on Danish stages.
+            Our approach to learning, correcting, and coaching posing is
+            significantly different from the existing methods.
+          </p>
+          <p>
+            At AtletPosing, we focus on your posing development through a
+            customized process, not just "one-time corrections." We achieve this
+            through our unique "4-Step Strategy," which ensures you reach your
+            goal.
+          </p>
+          <h3>4-Step Strategy</h3>
+          <ol>
+            <li>Analysis of physique and current posing level.</li>
+            <li>Customized posing programming schedule.</li>
+            <li>
+              Weekly posing sessions with corrections and in-depth explanations
+              for each correction, ensuring progressive learning and
+              understanding.
+            </li>
+            <li>
+              Virtual analysis feedback and evaluation from our posing sessions.
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="about-atletposing" id="aboutAtletPosing">
+        <h2>About AtletPosing</h2>
+        <div class="content">
+          <p>
+            My name is Claes Nielsen, and I am behind AtletPosing. I have
+            studied posing for half a decade and compete in Classic and Men’s
+            Physique myself. I’m not exactly sure where my early passion for
+            posing came from, but I became obsessed with it, as if I was born
+            for it. The ability to create an illusion with your own body and
+            outshine a better athlete just by showcasing your physique
+            fascinated me. As I grew older and noticed the lack of understanding
+            and knowledge about posing, I knew it was my mission to bring this
+            to Danish stages. I continuously improved my own posing daily,
+            attended courses, and learned from the best posing coaches in the
+            world, including Jon Lofthouse, Daniel Coffeen (from J3U), and many
+            more.
+          </p>
+          <p>
+            After years of studying and practice, I started helping Danish and a
+            few international athletes. From there, it quickly progressed, and I
+            have now assisted many athletes in bringing their best package to
+            the stage.
+          </p>
+        </div>
+      </section>
+      <footer class="conclusion-section">
+        <div class="footer-content">
+          <p>Jens The Beast © 2024</p>
+          <p>All rights reserved</p>
+          <p>Jens The Beast ApS</p>
+          <p>CVR: 40268081</p>
+        </div>
+        <div class="AtletPosing-logo">
+          <img src="Logo.png" alt="" />
+        </div>
+        <div class="social-links">
+          <ul class="socials">
+            <a
+              href="https://www.facebook.com/chelseaacaicafeny
+"
+            >
+              <li class="social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  fill="#861fdc"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                  />
+                </svg>
+              </li>
+            </a>
+            <a href="https://www.instagram.com/chelseaacaicafe_ny">
+              <li class="social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  fill="#861fdc"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                  />
+                </svg>
+              </li>
+            </a>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
