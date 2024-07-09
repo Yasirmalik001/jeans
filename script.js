@@ -1,4 +1,3 @@
-// Initialize Swiper
 var swiper = new Swiper(".swiper-container", {
   loop: true,
   slidesPerView: 2,
@@ -30,32 +29,29 @@ var swiper = new Swiper(".swiper-container", {
   },
   // Add any other Swiper configurations you need
 });
-
 const categoryButtons = document.querySelectorAll(".category-btn");
 categoryButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    nextStep();
-  });
+  button.addEventListener("click", nextStep);
 });
 
 const levelButtons = document.querySelectorAll(".level-btn");
 levelButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    nextStep();
-  });
+  button.addEventListener("click", nextStep);
 });
 
 const timeButtons = document.querySelectorAll(".time-btn");
 timeButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    nextStep();
-  });
+  button.addEventListener("click", nextStep);
 });
 
 const showContactFormBtn = document.getElementById("showContactFormBtn");
-showContactFormBtn.addEventListener("click", function () {
-  showContactForm();
-});
+showContactFormBtn.addEventListener("click", showContactForm);
+
+const prevBtn = document.getElementById("prevBtn");
+prevBtn.addEventListener("click", prevStep);
+
+const nextBtn = document.getElementById("nextBtn");
+nextBtn.addEventListener("click", nextStep);
 
 let currentStep = 1;
 
@@ -68,6 +64,20 @@ function nextStep() {
   if (nextStepDiv) {
     nextStepDiv.classList.add("active");
     updateProgressBar();
+    updateNavigationButtons();
+  }
+}
+
+function prevStep() {
+  const currentStepDiv = document.getElementById(`step${currentStep}`);
+  currentStepDiv.classList.remove("active");
+  currentStep--;
+
+  const prevStepDiv = document.getElementById(`step${currentStep}`);
+  if (prevStepDiv) {
+    prevStepDiv.classList.add("active");
+    updateProgressBar();
+    updateNavigationButtons();
   }
 }
 
@@ -77,7 +87,9 @@ function showContactForm() {
 
   const step5 = document.getElementById("step5");
   step5.classList.add("active");
+  currentStep = 5;
   updateProgressBar();
+  updateNavigationButtons();
 }
 
 function updateProgressBar() {
@@ -85,6 +97,29 @@ function updateProgressBar() {
   const progressBar = document.querySelector(".progress-bar");
   progressBar.style.width = `${progress}%`;
 }
+
+function updateNavigationButtons() {
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  if (currentStep === 1) {
+    prevBtn.style.opacity = "0.5";
+    prevBtn.style.pointerEvents = "none"; // Disable the button
+  } else {
+    prevBtn.style.opacity = "1";
+    prevBtn.style.pointerEvents = "auto"; // Enable the button
+  }
+
+  if (currentStep === 5) {
+    nextBtn.style.opacity = "0.5";
+    nextBtn.style.pointerEvents = "none"; // Disable the button
+  } else {
+    nextBtn.style.opacity = "1";
+    nextBtn.style.pointerEvents = "auto"; // Enable the button
+  }
+}
+
+updateNavigationButtons();
 
 let ctaButton = document.querySelector(".elementor-size-sm");
 window.addEventListener("scroll", () => {
